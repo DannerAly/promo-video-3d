@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "danneraly-promo",
+  "description": "Claude Code skills by Aly Danner",
+  "owner": {
+    "name": "Aly Danner",
+    "url": "https://github.com/DannerAly"
+  },
+  "plugins": [
+    {
+      "name": "promo-video-3d",
+      "source": ".",
+      "description": "Apple-style 30-second promo videos with 3D devices and kinetic type synced to the music, rendered frame by frame with motion blur.",
+      "category": "design",
+      "tags": ["video", "promo", "threejs", "3d", "animation", "kinetic-typography"]
+    }
+  ]
+}

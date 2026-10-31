@@ -1,0 +1,13 @@
+{
+  "name": "promo-video-3d",
+  "displayName": "Promo Video 3D",
+  "description": "Apple-style 30-second promo videos for apps and software: 3D laptop and phone showing real screenshots, kinetic type on every beat of the music, real motion blur, in landscape, vertical and square.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aly Danner",
+    "url": "https://github.com/DannerAly"
+  },
+  "repository": "https://github.com/DannerAly/promo-video-3d",
+  "license": "MIT",
+  "keywords": ["video", "promo", "commercial", "reel", "threejs", "3d", "kinetic-typography", "motion-graphics", "beat-sync"]
+}
