@@ -8,7 +8,7 @@
 
 HTML + Three.js, rendered frame by frame with real motion blur. Landscape, vertical and square from the same file.
 
-[**🌐 Website**](https://alydanner.me/promo-video-3d/) · [**▶ Watch the demo (MP4)**](https://github.com/DannerAly/promo-video-3d/releases/latest) · [Install](#install) · [Usage](#usage) · [How it works](#how-it-works) · [🇪🇸 Español](README.es.md)
+[**🌐 Website**](https://danneraly.github.io/promo-video-3d/) · [**▶ Watch the demo (MP4)**](https://github.com/DannerAly/promo-video-3d/releases/latest) · [Install](#install) · [Usage](#usage) · [How it works](#how-it-works) · [🇪🇸 Español](README.es.md)
 
 [![MIT License](https://img.shields.io/badge/license-MIT-4F46E5)](LICENSE)
 [![Claude Skill](https://img.shields.io/badge/Claude-Skill-D97757?logo=claude&logoColor=white)](https://code.claude.com/docs/en/skills)

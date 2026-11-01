@@ -8,7 +8,7 @@
 
 HTML + Three.js, grabado cuadro por cuadro con motion blur real. Horizontal, vertical y cuadrado desde el mismo archivo.
 
-[**🌐 Sitio web**](https://alydanner.me/promo-video-3d/) · [**▶ Ver el demo (MP4)**](https://github.com/DannerAly/promo-video-3d/releases/latest) · [Instalar](#instalar) · [Uso](#uso) · [Cómo funciona](#cómo-funciona) · [🇺🇸 English](README.md)
+[**🌐 Sitio web**](https://danneraly.github.io/promo-video-3d/) · [**▶ Ver el demo (MP4)**](https://github.com/DannerAly/promo-video-3d/releases/latest) · [Instalar](#instalar) · [Uso](#uso) · [Cómo funciona](#cómo-funciona) · [🇺🇸 English](README.md)
 
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-4F46E5)](LICENSE)
 [![Claude Skill](https://img.shields.io/badge/Claude-Skill-D97757?logo=claude&logoColor=white)](https://code.claude.com/docs/en/skills)
