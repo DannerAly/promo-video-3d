@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Promo Video 3D</title>
+<meta name="description" content="A Claude skill that turns your app into an Apple-style 30-second promo: 3D laptop and phone with your real screens, kinetic type on every beat, real motion blur.">
+<meta property="og:title" content="Promo Video 3D — a Claude skill">
+<meta property="og:description" content="Apple-style 30-second promos for your app: 3D devices, kinetic type on the beat, real motion blur. Landscape, vertical and square. Just ask Claude.">
+<meta property="og:image" content="https://danneraly.github.io/promo-video-3d/og.jpg">
+<meta property="og:url" content="https://danneraly.github.io/promo-video-3d/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23ff9f0a'/%3E%3Cstop offset='.4' stop-color='%23ff375f'/%3E%3Cstop offset='.7' stop-color='%23bf5af2'/%3E%3Cstop offset='1' stop-color='%230a84ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M25 19v26l21-13z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font:'Poppins';
+  --grad:linear-gradient(90deg,#ff9f0a,#ff375f 35%,#bf5af2 65%,#0a84ff);
+  --accent:#bf5af2;--accent-d:#8e3fd1;
+  --bg:#ffffff;--ink:#1d1d1f;--ink2:#6e6e73;--ink3:#a1a1a6;--line:#e6e6eb;--soft:#f5f5f7;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font),ui-sans-serif,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video{display:block;max-width:100%}
+
+section{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px max(16px,5vw) 80px}
+.eyebrow{font-size:clamp(11px,.95vw,13px);font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-d);margin-bottom:22px}
+h1{font-size:clamp(44px,8.4vw,132px);font-weight:700;letter-spacing:-.055em;line-height:1.02}
+h2{font-size:clamp(36px,6vw,92px);font-weight:700;letter-spacing:-.05em;line-height:1.04}
+.lead{font-size:clamp(17px,1.6vw,24px);color:var(--ink2);margin-top:24px;letter-spacing:-.012em;max-width:760px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* entrada con desenfoque, como en el video */
+.r{opacity:0;transform:translate3d(0,42px,0);filter:blur(10px);transition:opacity 1.2s var(--ease) var(--d,0s),transform 1.3s var(--ease) var(--d,0s),filter 1.2s var(--ease) var(--d,0s)}
+.r.in{opacity:1;transform:none;filter:none}
+
+/* palabra tachada que cambia en cada golpe */
+.strike{position:relative;display:inline-block;color:var(--ink3)}
+.strike i{position:absolute;left:-2%;top:54%;height:.11em;margin-top:-.055em;border-radius:99px;background:var(--grad);width:0;transition:width .38s cubic-bezier(.65,0,.35,1)}
+.strike.hit i{width:104%}
+.hero .strike{font-size:clamp(28px,4.4vw,64px);font-weight:700;letter-spacing:-.05em;margin-bottom:10px;min-height:1.1em}
+
+.screen{width:min(1080px,100%);margin-top:48px;border-radius:clamp(14px,2vw,26px);overflow:hidden;background:var(--soft);box-shadow:0 30px 80px rgba(20,20,40,.12),0 0 0 1px rgba(0,0,0,.04);aspect-ratio:16/9}
+.screen video{width:100%;height:100%;object-fit:cover}
+.note{margin-top:14px;font-size:12px;color:var(--ink3)}
+
+.words{max-width:1100px;font-size:clamp(30px,4.6vw,70px);font-weight:700;letter-spacing:-.045em;line-height:1.14}
+.words .w{opacity:.13;transition:opacity .25s}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,26px);max-width:1100px;width:100%;margin-top:56px;text-align:left}
+.step{background:var(--soft);border-radius:24px;padding:28px 26px 30px}
+.step .num{font-size:13px;font-weight:600;letter-spacing:.12em}
+.step h3{font-size:clamp(22px,2.1vw,30px);font-weight:600;letter-spacing:-.035em;line-height:1.1;margin-top:10px}
+.step p{font-size:15px;color:var(--ink2);margin-top:10px;line-height:1.5}
+.step code{font:500 13px ui-monospace,SFMono-Regular,Menlo,monospace;background:#fff;border-radius:6px;padding:1px 6px}
+
+.formats{display:flex;align-items:flex-end;justify-content:center;gap:clamp(12px,2vw,28px);width:min(1100px,100%);margin-top:56px}
+.formats figure{flex:var(--f);min-width:0}
+.formats video{width:100%;border-radius:clamp(10px,1.4vw,20px);box-shadow:0 20px 50px rgba(20,20,40,.1),0 0 0 1px rgba(0,0,0,.04);background:var(--soft)}
+.formats figcaption{margin-top:12px;font-size:13px;font-weight:500;color:var(--ink2)}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:34px;max-width:900px}
+.chips span,.chips a{font-size:13px;font-weight:500;padding:9px 16px;border-radius:999px;background:var(--soft);color:var(--ink);text-decoration:none}
+.chips a:hover{background:var(--line)}
+
+/* barra superior, idioma, estrella e instalación */
+.bar{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px max(16px,3vw);pointer-events:none}
+.bar>*{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.brand i{display:grid;place-items:center;width:20px;height:20px;border-radius:6px;background:var(--grad)}
+.brand i::after{content:"";border-left:7px solid #fff;border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;margin-left:2px}
+.bar nav{display:flex;align-items:center;gap:8px}
+.lang{display:flex;font-size:12px;font-weight:600;letter-spacing:.06em;background:rgba(255,255,255,.85);border:1px solid var(--line);border-radius:999px;padding:3px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.lang a{color:var(--ink3);text-decoration:none;padding:5px 9px;border-radius:999px}
+.lang a.on{color:var(--ink);background:var(--soft)}
+.star{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:500;color:#fff;background:var(--ink);text-decoration:none;padding:8px 15px;border-radius:999px;transition:transform .4s var(--ease),background .3s}
+.star:hover{transform:translateY(-1px);background:#000}
+.star svg{width:15px;height:15px;fill:currentColor}
+.install{display:inline-flex;align-items:center;gap:12px;margin-top:34px;font:500 clamp(12px,1.1vw,15px)/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px 16px 14px 18px;cursor:pointer;max-width:100%;transition:border-color .3s}
+.install:hover{border-color:color-mix(in srgb,var(--accent) 40%,white)}
+.install code{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.install code b{color:var(--accent-d);font-weight:500}
+.install span{font-family:var(--font),sans-serif;font-size:12px;font-weight:600;color:var(--accent-d);white-space:nowrap}
+footer{padding:30px 20px 46px;text-align:center;font-size:12px;color:var(--ink3);letter-spacing:.08em}
+footer a{color:inherit}
+
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){
+  .steps{grid-template-columns:1fr}
+  .formats{flex-wrap:wrap}.formats figure{flex:1 1 40%}.formats figure:first-child{flex-basis:100%}
+  .brand b{display:none}.star{padding:8px 12px}
+  .install{flex-direction:column;gap:9px;max-width:calc(100vw - 32px);padding:14px 16px}
+  .install code{white-space:normal;overflow-wrap:anywhere;line-height:1.45;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){.r{transition:none;opacity:1;transform:none;filter:none}.strike i{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="brand" href="https://github.com/DannerAly/promo-video-3d"><i></i><b>promo-video-3d</b></a>
+  <nav>
+    <div class="lang"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></div>
+    <a class="star" href="https://github.com/DannerAly/promo-video-3d"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg><span data-en="Star on GitHub">Estrella en GitHub</span></a>
+  </nav>
+</header>
+
+<main>
+  <!-- Portada -->
+  <section class="hero">
+    <p class="eyebrow r" data-en="A Claude skill · Open source">Skill para Claude · Open source</p>
+    <div class="strike r" style="--d:.06s" id="strike" aria-hidden="true"><span></span><i></i></div>
+    <h1 class="r" style="--d:.12s" data-en="Your app,<br><span class=&quot;grad&quot;>on the beat.</span>">Tu app,<br><span class="grad">al ritmo.</span></h1>
+    <p class="lead r" style="--d:.28s" data-en="30-second Apple-style promos with a 3D laptop and phone, kinetic type and real motion blur. Just ask Claude.">Videos promocionales de 30 segundos estilo Apple, con compu y celular en 3D, letras animadas y motion blur real. Pídeselos a Claude.</p>
+    <div class="screen r" style="--d:.4s"><video src="demo.mp4" poster="poster.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+    <p class="note r" style="--d:.5s" data-en="Demo without music. Made with the skill.">Demo sin música. Hecho con la skill.</p>
+  </section>
+
+  <!-- Frase que se ilumina palabra por palabra -->
+  <section>
+    <p class="words" data-words data-en="No video editor. No keyframes. You bring the app and the song; Claude writes the script, finds the beat and renders the video.">Sin editor de video. Sin keyframes. Tú pones la app y la canción; Claude escribe el guion, encuentra el ritmo y renderiza el video.</p>
+  </section>
+
+  <!-- Pasos -->
+  <section>
+    <p class="eyebrow r" data-en="How it works">Cómo funciona</p>
+    <h2 class="r" style="--d:.08s" data-en="Six steps. <span class=&quot;grad&quot;>One prompt.</span>">Seis pasos. <span class="grad">Un pedido.</span></h2>
+    <div class="steps">
+      <div class="step r"><span class="num grad">01</span><h3 data-en="Script first">Primero el guion</h3><p data-en="Before → problem → promise → laptop → phone → end card. 1 to 4 words per beat.">Lo de antes → problema → promesa → compu → celular → cierre. De 1 a 4 palabras por golpe.</p></div>
+      <div class="step r" style="--d:.06s"><span class="num grad">02</span><h3 data-en="Find the beat">Encuentra el ritmo</h3><p data-en="<code>beats.mjs</code> measures BPM, the downbeat and the 3-hit fills. You confirm them by ear.">
+<code>beats.mjs</code> mide los BPM, el primer golpe y los «3 golpes». Tú los confirmas de oído.</p></div>
+      <div class="step r" style="--d:.12s"><span class="num grad">03</span><h3 data-en="Real screens">Pantallas reales</h3><p data-en="<code>capture.mjs</code> screenshots your product (with login if needed) for the 3D devices.">
+<code>capture.mjs</code> captura tu producto (con login si hace falta) para los equipos 3D.</p></div>
+      <div class="step r"><span class="num grad">04</span><h3 data-en="One CONFIG">Un solo CONFIG</h3><p data-en="Words, beats, brand, store buttons and screen patches. A <code>*</code> paints a word with the gradient.">Palabras, golpes, marca, tiendas y parches de pantalla. Un <code>*</code> pinta la palabra con el degradado.</p></div>
+      <div class="step r" style="--d:.06s"><span class="num grad">05</span><h3 data-en="Visual check">Revisión visual</h3><p data-en="Stills of any second in all three formats before the full render.">Capturas de cualquier segundo en los tres formatos antes del render.</p></div>
+      <div class="step r" style="--d:.12s"><span class="num grad">06</span><h3 data-en="Render">Render</h3><p data-en="Frame by frame in headless Chrome, 4 sub-frames of motion blur, music added by ffmpeg.">Cuadro por cuadro en Chrome sin ventana, 4 submuestras de motion blur y la música con ffmpeg.</p></div>
+    </div>
+  </section>
+
+  <!-- Formatos -->
+  <section>
+    <p class="eyebrow r" data-en="One file, three videos">Un archivo, tres videos</p>
+    <h2 class="r" style="--d:.08s" data-en="Landscape. Vertical. <span class=&quot;grad&quot;>Square.</span>">Horizontal. Vertical. <span class="grad">Cuadrado.</span></h2>
+    <div class="formats">
+      <figure class="r" style="--f:16"><video src="demo.mp4" poster="poster.jpg" muted loop playsinline preload="none" data-lazy></video><figcaption>1920 × 1080</figcaption></figure>
+      <figure class="r" style="--f:5.06;--d:.08s"><video src="demo-vertical.mp4" poster="poster-vertical.jpg" muted loop playsinline preload="none" data-lazy></video><figcaption>1080 × 1920</figcaption></figure>
+      <figure class="r" style="--f:9;--d:.16s"><video src="demo-square.mp4" poster="poster-square.jpg" muted loop playsinline preload="none" data-lazy></video><figcaption>1080 × 1080</figcaption></figure>
+    </div>
+    <div class="chips r">
+      <span data-en="🎵 Synced to the music">🎵 Al ritmo de la música</span>
+      <span data-en="💻 3D laptop + phone">💻 Compu + celular 3D</span>
+      <span data-en="✍️ Struck-through, decoding, slamming words">✍️ Palabras tachadas, descifradas y de golpe</span>
+      <span data-en="🖼️ Real screenshots and product photos">🖼️ Capturas y fotos reales</span>
+      <span data-en="🎞️ 180° motion blur">🎞️ Motion blur de 180°</span>
+      <span data-en="🍎 White, minimal, one typeface">🍎 Blanco, minimalista, una tipografía</span>
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section>
+    <p class="eyebrow r" data-en="Free &amp; open source">Gratis y open source</p>
+    <h2 class="r" style="--d:.08s" data-en="Make yours.<br><span class=&quot;grad&quot;>Leave a star.</span>">Haz el tuyo.<br><span class="grad">Deja una estrella.</span></h2>
+    <div class="r" style="--d:.15s"><button class="install" type="button" data-copy="/plugin marketplace add DannerAly/promo-video-3d"><code><b>/plugin</b> marketplace add DannerAly/promo-video-3d</code><span data-en="Copy">Copiar</span></button></div>
+    <div class="chips r" style="--d:.22s"><a href="https://github.com/DannerAly/promo-video-3d">GitHub</a><a href="https://github.com/DannerAly/promo-video-3d#install" data-en="Install guide">Cómo instalar</a><a href="https://github.com/DannerAly/promo-video-3d/releases/latest" data-en="Download .zip">Descargar .zip</a><a href="https://danneraly.github.io/scroll-story-3d/" data-en="Also: Scroll Story 3D →">También: Scroll Story 3D →</a></div>
+  </section>
+</main>
+<footer><span data-en="Made with Claude Code by">Hecho con Claude Code por</span> <a href="https://github.com/DannerAly">Aly Danner</a> · MIT</footer>
+
+<script>
+(() => {
+  // Idioma: ?lang=es|en, si no, el del navegador
+  const q = new URLSearchParams(location.search).get('lang');
+  const lang = q === 'en' || q === 'es' ? q : (navigator.language || '').toLowerCase().startsWith('es') ? 'es' : 'en';
+  document.documentElement.lang = lang;
+  if (lang === 'en') document.querySelectorAll('[data-en]').forEach(el => { el.innerHTML = el.dataset.en; });
+  document.querySelectorAll('[data-lang]').forEach(a => a.classList.toggle('on', a.dataset.lang === lang));
+
+  // Copiar (navigator.clipboard solo existe en HTTPS)
+  const copy = text => navigator.clipboard && isSecureContext ? navigator.clipboard.writeText(text) : new Promise((ok, fail) => {
+    const ta = Object.assign(document.createElement('textarea'), { value: text });
+    ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta); ta.select();
+    const done = document.execCommand('copy'); ta.remove(); done ? ok() : fail();
+  });
+  document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => {
+    const label = b.querySelector('span'), prev = label.textContent;
+    copy(b.dataset.copy).then(() => { label.textContent = lang === 'en' ? 'Copied ✓' : 'Copiado ✓'; setTimeout(() => { label.textContent = prev; }, 1600); }, () => {});
+  }));
+
+  // Entradas con desenfoque
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('in');
+    else if (e.boundingClientRect.top > 0) e.target.classList.remove('in');
+  }), { threshold: 0.15 });
+  document.querySelectorAll('.r').forEach(el => io.observe(el));
+
+  // Videos de formatos: se cargan y reproducen solo cuando se ven
+  const vio = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { v.preload = 'auto'; v.play().catch(() => {}); } else v.pause();
+  }), { threshold: 0.25 });
+  document.querySelectorAll('video[data-lazy]').forEach(v => vio.observe(v));
+
+  // Palabra tachada en cada golpe (114 BPM, como el demo)
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const list = lang === 'en' ? ['Video editor.', 'Keyframes.', 'Templates.', 'Stock footage.'] : ['Editor de video.', 'Keyframes.', 'Plantillas.', 'Stock genérico.'];
+  const st = document.getElementById('strike'), sw = st.querySelector('span');
+  let k = 0;
+  const beat = 60000 / 114 * 2;
+  const tick = () => { sw.textContent = list[k++ % list.length]; st.classList.remove('hit'); if (reduce) { st.classList.add('hit'); return; } setTimeout(() => st.classList.add('hit'), beat * 0.45); };
+  tick(); if (!reduce) setInterval(tick, beat);
+
+  // Frase que se ilumina con el scroll
+  document.querySelectorAll('[data-words]').forEach(el => {
+    el.innerHTML = el.textContent.trim().split(/\s+/).map(w => '<span class="w">' + w + '</span>').join(' ');
+  });
+  const words = [...document.querySelectorAll('[data-words] .w')], box = document.querySelector('[data-words]');
+  const onScroll = () => {
+    const r = box.getBoundingClientRect(), vh = innerHeight;
+    const p = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (vh * 0.85 - vh * 0.2 + r.height * 0.3)));
+    const n = words.length;
+    words.forEach((w, i) => { w.style.opacity = (0.13 + 0.87 * Math.min(1, Math.max(0, p * (n + 2) - i))).toFixed(2); });
+  };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+})();
+</script>
+</body>
+</html>

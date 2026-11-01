@@ -20,7 +20,7 @@ La plantilla trae esta estructura de 14 compases (~30 s a 110–120 BPM). Cada f
 
 ## Guiones que funcionaron
 
-**Sistema de ventas para negocios (Maximo):**
+**Ejemplo real: sistema de ventas para negocios (Maximo, el del demo):**
 
 - strike: Cuaderno. · Excel. · Calculadora. · Papelitos.
 - problem: No más · *descontrol.*

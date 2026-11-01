@@ -8,7 +8,7 @@
 
 HTML + Three.js, grabado cuadro por cuadro con motion blur real. Horizontal, vertical y cuadrado desde el mismo archivo.
 
-[**▶ Ver el demo (MP4)**](https://github.com/DannerAly/promo-video-3d/releases/latest) · [Instalar](#instalar) · [Uso](#uso) · [Cómo funciona](#cómo-funciona) · [🇺🇸 English](README.md)
+[**🌐 Sitio web**](https://danneraly.github.io/promo-video-3d/) · [**▶ Ver el demo (MP4)**](https://github.com/DannerAly/promo-video-3d/releases/latest) · [Instalar](#instalar) · [Uso](#uso) · [Cómo funciona](#cómo-funciona) · [🇺🇸 English](README.md)
 
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-4F46E5)](LICENSE)
 [![Claude Skill](https://img.shields.io/badge/Claude-Skill-D97757?logo=claude&logoColor=white)](https://code.claude.com/docs/en/skills)
@@ -99,13 +99,13 @@ window.CONFIG = {
   audio: 'audio.m4a', duration: 30,
   bpm: 114, firstBeat: 0.08,
   hits: [[5.30, 5.83, 6.37], [15.83, 16.37, 16.90], [24.27, 24.83, 25.30]],
-  hitWords: [['Vende.', 'Cobra.', '*Controla.'], ['Efectivo.', '*QR.', 'Tarjeta.'], ['Más ágil.', 'Más ventas.', '*Al máximo.']],
-  strike: ['Cuaderno.', 'Excel.', 'Calculadora.', 'Papelitos.'],
-  problem: ['No más', '*descontrol.'],
+  hitWords: [['Planea.', 'Cobra.', '*Crece.'], ['Web.', '*Móvil.', 'Equipo.'], ['Más simple.', 'Más rápido.', '*Mejor.']],
+  strike: ['Cuaderno.', 'Excel.', 'Correos.', 'Papelitos.'],
+  problem: ['No más', '*caos.'],
   promise: ['Todo simple,', 'a la mano'],
-  laptopHead: 'Tus ventas, *al *instante.',
+  laptopHead: 'Todo tu negocio, *en *un *lugar.',
   // … stack, bridge, phoneHead, decode, duoHead, tiles
-  brand: { name: 'Maximo', tagline: 'Agiliza tu negocio al máximo.', url: 'maximo.work', appStore: true, googlePlay: true },
+  brand: { name: 'Nova', tagline: 'Tu negocio, más simple.', url: 'tuapp.com', appStore: true, googlePlay: true },
   patches: { laptop: [], phone: [] },
 };
 ```

@@ -58,7 +58,7 @@ Punto de partida: copia `template/index.html` a la carpeta del usuario y edita s
 - **Titular encima de la pantalla** en tomas cercanas: sube el punto de mira de la cámara (`ty`) en vez de achicar el equipo.
 - **Fichas flotantes que tapan la pantalla del celular**: van detrás (`z` negativo).
 - **Nombres de variables**: el módulo ya usa `scr`, `lid`, `tiles`, `T`. Un `const` repetido rompe todo sin mostrar nada; mira la consola de `rec.mjs` (imprime `ERROR`).
-- **Emojis en las fichas**: según la máquina no se dibujan. Usa símbolos (`Bs`, `QR`, `+1`, `✓`, `%`, `★`).
+- **Emojis en las fichas**: según la máquina no se dibujan. Usa símbolos (`$`, `QR`, `+1`, `✓`, `%`, `★`).
 - **El nombre del producto cambió** y las capturas son de antes: tápalo con un parche (`fill` + `text`) en vez de volver a capturar.
 - **Botones de tiendas**: los de la plantilla son dibujos parecidos a los oficiales. Si el video se va a publicar, avisa que conviene usar las insignias oficiales de Apple y Google, y quita la tienda en la que la app todavía no está.
 - **Precios y cifras**: si los inventas para el ejemplo, dilo. Nunca presentes métricas inventadas como reales.
